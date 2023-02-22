@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 
@@ -35,6 +36,13 @@ const Login = () => {
           window.localStorage.setItem("soft-valley", data.data.token);
           setUser(data.data.user);
           navigate('dashboard/leads');
+          toast.success("Lopg in Successful")
+        }
+        else{
+          toast.error(`Please Provide  
+                        email : admin@example.com
+                        passwod : password
+          `)
         }
       });
   };

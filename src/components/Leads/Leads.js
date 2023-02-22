@@ -4,6 +4,7 @@ import userPro from "../../assets/img/user (2).png";
 
 
 import Datepicker from "react-tailwindcss-datepicker"; 
+import { toast } from "react-hot-toast";
 
 
 
@@ -111,8 +112,11 @@ const Leads = () => {
         console.log("after filter data",data);
         window.localStorage.setItem("soft-valley", data.data.token);
         if(data.success){
-          window.localStorage.setItem("soft-valley", data.data.token);
+          toast.success(data.message);
           
+        }
+        else{
+          toast.error("Please again login")
         }
       });
 
