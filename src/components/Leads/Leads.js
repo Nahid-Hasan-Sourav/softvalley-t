@@ -24,7 +24,7 @@ const Leads = () => {
       setValue(newValue); 
       } 
 
-      console.log("newValue 2:", value);
+      // console.log("newValue 2:", value);
 
   // console.log("This is from leads components ", status);
 
@@ -94,7 +94,7 @@ const Leads = () => {
         contacted_date_to:value.endDate,
       }
 
-      console.log("This all data for get search data after search ",body);
+      // console.log("This all data for get search data after search ",body);
 
 
 
@@ -109,7 +109,7 @@ const Leads = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("after filter data",data);
+        // console.log("after filter data",data);
         window.localStorage.setItem("soft-valley", data.data.token);
         if(data.success){
           toast.success(data.message);

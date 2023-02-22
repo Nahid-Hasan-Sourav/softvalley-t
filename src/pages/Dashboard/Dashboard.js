@@ -9,12 +9,16 @@ import {GoThreeBars} from 'react-icons/go';
 import {FcSalesPerformance} from 'react-icons/fc';
 import sale from '../../assets/img/sale.png'
 import expense from '../../assets/img/current-expense.png'
+import { toast } from 'react-hot-toast';
 
 const Dashboard = () => {
     let activeStyle = {
         backgroundColor: "#2563eb",
         color:"white"
       };
+      const handleLogout=()=>{
+        toast.error("This button functionality is not implemented yet!")
+      }
     return (
       <div>
         <div className="drawer drawer-mobile">
@@ -104,7 +108,9 @@ const Dashboard = () => {
               </li>
 
               </NavLink>
-              <button className='btn mt-10 bg-[#2563eb] text-white'>LOGOUT</button>
+              <button className='btn mt-10 bg-[#2563eb] text-white'
+              onClick={()=>handleLogout()}
+              >LOGOUT</button>
 
             </ul>
           
