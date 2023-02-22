@@ -31,7 +31,7 @@ const Dashboard = () => {
           <div className="drawer-side border">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             
-            <ul className="menu p-4 w-80 bg-gray-500 z-10 lg:bg-gray-300 text-base-content">
+            <ul className="menu p-4 w-80 bg-gray-500 z-10 lg:bg-gray-300 text-base-content h-100">
             <div>
                 <img src={logo} className="w-[200px]"/>
                 <div className='flex items-center'>
@@ -102,8 +102,12 @@ const Dashboard = () => {
               <li>
                 <a><span><img src={expense} className="w-[16px] h-[16px]"/></span>Expense</a>
               </li>
+
               </NavLink>
+              <button className='btn mt-10 bg-[#2563eb] text-white'>LOGOUT</button>
+
             </ul>
+          
           </div>
         </div>
       </div>

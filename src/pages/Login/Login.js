@@ -13,7 +13,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    fetch(`http://crm.softvalley.sveducrm.com/api/admin/login`, {
+    fetch(`https://crm.softvalley.sveducrm.com/api/admin/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
